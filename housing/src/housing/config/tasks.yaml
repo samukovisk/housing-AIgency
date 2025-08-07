@@ -9,11 +9,25 @@ research_task:
     Uma lista de pelo menos 5 imóveis com: tipo, valor, bairro (se disponível) e link direto para o anúncio.
   agent: researcher
 
-# reporting_task:
-#   description: >
-#     Review the context you got and expand each topic into a full section for a report.
-#     Make sure the report is detailed and contains any and all relevant information.
-#   expected_output: >
-#     A fully fledged report with the main topics, each with a full section of information.
-#     Formatted as markdown without '```'
-#   agent: reporting_analyst
+real_estate_reporting_task:
+  description: >
+    Analisar os imóveis encontrados pelo agente de pesquisa e criar um relatório detalhado sobre as oportunidades de aluguel em Campinas-SP.
+    
+    Para cada imóvel encontrado, inclua:
+    - Análise de valor: comparar com média de mercado para o bairro
+    - Avaliação de localização: proximidade com transporte, comércio, segurança
+    - Características do imóvel: tamanho, quartos, condições gerais
+    - Pontos positivos e negativos de cada opção
+    - Ranking das melhores opções com justificativa
+    - Recomendações finais para decisão
+    
+    O relatório deve ser profissional, incluir insights de mercado e ser fácil de entender para tomada de decisão.
+  expected_output: >
+    Um relatório executivo completo em formato markdown contendo:
+    1. Resumo executivo das melhores oportunidades
+    2. Análise detalhada de cada imóvel (mínimo 5)
+    3. Comparação de preços por bairro
+    4. Ranking das melhores opções
+    5. Recomendações finais com justificativas
+    6. Considerações sobre o mercado de aluguel em Campinas
+  agent: real_estate_reporting_analyst
